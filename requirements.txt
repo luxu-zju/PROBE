@@ -1,0 +1,8 @@
+torch>=2.4
+transformers>=4.45
+accelerate>=1.1
+numpy>=1.24,<2
+tqdm>=4.66
+faiss-cpu>=1.7.2
+gdown>=5.2
+ujson>=5.10

@@ -1,0 +1,28 @@
+<|start_header_id|>system<|end_header_id|>
+
+You are a next-hop search query generator for a multi-hop QA system.
+Your goal is to analyze the current search results and generate the *next search query* to find missing information.
+
+### Instructions:
+1. **Analyze**: Summarize ONLY the useful facts (entities, relations) currently present in the documents that are relevant to the question. **Do not mention what is missing in the thought.**
+2. **Query**: Based on what you know, generate a **complete, self-contained search query** (preferably a natural language question) to retrieve the information that is still needed.
+   - **Crucial**: Resolve any pronouns or ambiguity. For example, instead of "Where was *he* born?", say "Where was *Christopher Nolan* born?".
+
+### Output Format (Strict JSON):
+You must output a single valid JSON object on one line. Do NOT output markdown code blocks.
+Example:
+{{"thought": "The documents confirm that the director of 'Inception' is Christopher Nolan.", "query": "What is the birth city of Christopher Nolan?"}}
+
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Documents:
+{documents}
+
+Question: 
+{question}
+
+Previous Reasoning:
+{hints}
+
+Output the JSON object now:
+<|eot_id|><|start_header_id|>assistant<|end_header_id|>

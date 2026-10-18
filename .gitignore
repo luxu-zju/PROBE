@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# Local datasets, models, and run outputs
+data/
+checkpoints/
+predictions/
+synthesis_runs/
+log/
+logs/
+wandb/
+.temp/
+nohup.out
+*.log
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
